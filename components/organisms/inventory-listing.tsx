@@ -17,7 +17,7 @@ type PotentialProfitsProps = {
   totalCargoProfit: number;
 };
 
-export const PotentialProfits = ({ entries }: PotentialProfitsProps) => {
+const PotentialProfits = ({ entries }: PotentialProfitsProps) => {
   return <View
     style={{
       backgroundColor: '#9f9ffc',
