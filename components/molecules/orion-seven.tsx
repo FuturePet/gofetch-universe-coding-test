@@ -21,7 +21,7 @@ export const OrionSeven = ({ inventoryItems }: OrionSevenProps) => {
         The best marketplace this side of Galaxon V!
       </SpaceText>
       {inventoryItems.map((item) => {
-        return <MarketItem item={{ name: item.name, price: item.sellPrice }} />;
+        return <MarketItem item={{ name: item.name, price: item.pricePerUnit }} />;
       })}
     </View>
   );

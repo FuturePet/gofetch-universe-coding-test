@@ -4,7 +4,33 @@ import { ShipInventory } from '../molecules/ship-inventory';
 import { useShipInventory } from '../../hooks/use-ship-inventory';
 import { OrionSeven } from '../molecules/orion-seven';
 import { useOrionSeven } from '../../hooks/use-orion-seven';
-import { PotentialProfits } from '../molecules/potential-profits';
+
+type ChartEntry = {
+  name: string;
+  buyPrice: number;
+  sellPrice: number;
+  profitPerUnit: number;
+};
+
+type PotentialProfitsProps = {
+  entries: ChartEntry[];
+  totalCargoProfit: number;
+};
+
+export const PotentialProfits = ({ entries }: PotentialProfitsProps) => {
+  return <View
+    style={{
+      backgroundColor: '#9f9ffc',
+      padding: 16,
+      margin: 24,
+      minWidth: '60vw',
+      minHeight: '20vh',
+    }}
+  >
+    <SpaceText style="header">Potential Profits</SpaceText>
+    {/* You enter your changes here */}
+  </View>
+};
 
 export const InventoryListing = () => {
   const { loading, inventory } = useShipInventory();
@@ -18,21 +44,9 @@ export const InventoryListing = () => {
       >
         {!loading && <ShipInventory inventoryItems={inventory} />}
         {!orionLoading && <OrionSeven inventoryItems={marketItems} />}
+        {!orionLoading && !loading && <PotentialProfits entries={[]} />}
       </View>
-      <View
-        style={{
-          backgroundColor: '#9f9ffc',
-          padding: 16,
-          margin: 24,
-          minWidth: '60vw',
-          minHeight: '20vh',
-        }}
-      >
-        <SpaceText style="header">Potential Profits</SpaceText>
-        <SpaceText style="body">You enter your changes here</SpaceText>
-        <PotentialProfits entries={[]} />
-        {/** Display the difference between ship inventory & orion seven */}
-      </View>
+
     </>
   );
 };

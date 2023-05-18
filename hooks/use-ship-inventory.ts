@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 
 const INVENTORY = [
-  { name: 'Magnetized Hammer', buyPrice: 10000, quantity: 4000 },
-  { name: 'Bionic Cyberpliers', buyPrice: 2000, quantity: 2000 },
-  { name: 'Space Blasters', buyPrice: 114000, quantity: 1500 },
-  { name: 'High-density Gofetchium', buyPrice: 10000000, quantity: 1 },
+  { name: 'Magnetized Hammer', costPerUnit: 10000, quantity: 4000 },
+  { name: 'Bionic Cyberpliers', costPerUnit: 2000, quantity: 2000 },
+  { name: 'Space Blasters', costPerUnit: 114000, quantity: 1500 },
+  { name: 'High-density Gofetchium', costPerUnit: 10000000, quantity: 1 },
 ];
 
 export type InventoryItem = {
   name: string;
-  buyPrice: number;
+  costPerUnit: number;
   quantity: number;
 };
 

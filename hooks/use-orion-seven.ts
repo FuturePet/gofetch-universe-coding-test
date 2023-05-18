@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 
 const MARKET_RATES = [
-  { name: 'Magnetized Hammer', sellPrice: 5000 },
-  { name: 'Bionic Cyberpliers', sellPrice: 4000 },
-  { name: 'Space Blasters', sellPrice: 120000 },
-  { name: 'Normal Kimonos', sellPrice: 900000 },
-  { name: 'High-density Gofetchium', sellPrice: 10000000 },
+  { name: 'Magnetized Hammer', pricePerUnit: 5000 },
+  { name: 'Bionic Cyberpliers', pricePerUnit: 4000 },
+  { name: 'Space Blasters', pricePerUnit: 120000 },
+  { name: 'Normal Kimonos', pricePerUnit: 900000 },
+  { name: 'High-density Gofetchium', pricePerUnit: 10000000 },
 ];
 
 export type MarketItem = {
   name: string;
-  sellPrice: number;
+  pricePerUnit: number;
 };
 
 export type UseOrionSeven = {

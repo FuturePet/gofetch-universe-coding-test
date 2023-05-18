@@ -12,7 +12,7 @@ _I recommend adding something to see what will happen if you sell **all of your 
 
 As the merchant has alluded to, update your dashboard to include a component that shows per-item potential profits (`$pricePerUnit - $costPerUnit`) if you sell **all of your sellable goods** to the merchants at Orion VII (not all items can be sold), as well as the **total** profits (`Sum(sellableItems, item => potentialProfits(item))`).
 
-Update the [inventory-vs-orion-seven.ts](components/organisms/inventory-vs-orion-seven.tsx) file to generate the required data and then display it in the `PotentialProfits` component within that file.
+Update the [inventory-listing.tsx](components/organisms/inventory-listing.tsx) file to generate the required data and then display it in the `PotentialProfits` component within that file.
 
 **Sort your list of items by most profitable**.
 

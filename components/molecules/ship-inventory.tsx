@@ -25,7 +25,7 @@ export const ShipInventory = ({ inventoryItems }: ShipInventoryProps) => {
           <MarketItem
             item={{
               name: item.name,
-              price: item.buyPrice,
+              price: item.costPerUnit,
               quantity: item.quantity,
             }}
           />
